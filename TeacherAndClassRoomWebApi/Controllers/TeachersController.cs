@@ -25,12 +25,16 @@ namespace TeacherAndClassRoomWebApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Teacher>>> GetTeachers()
         {
-          if (_context.Teachers == null)
-          {
-              return NotFound();
-          }
-            //  var teacher = _context.Teachers.ToList();
-            return await _context.Teachers.ToListAsync();
+            if (_context.Teachers == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var teacherObj= _context.Teachers.Include(e => e.Classrooms).ToList();
+               return Ok(mapper.Map<List<Teacher>>(teacherObj)) ;
+               // return await(_context.Teachers.Include(e => e.Classrooms).ToListAsync());
+            }
         }
 
         // GET: api/Teachers/5
@@ -41,22 +45,15 @@ namespace TeacherAndClassRoomWebApi.Controllers
           {
               return NotFound();
           }
-            var teacher = await _context.Teachers.Where(t => t.Id == id).Include(e => e.Classroom).FirstOrDefaultAsync();
-               
-
-            var obj = JsonConvert.SerializeObject(teacher);
-            
-
-            if (obj == null)
-            {
+           var teacher = await _context.Teachers.Where(t => t.Id == id).Include(e => e.Classrooms).FirstOrDefaultAsync();
+            if (teacher == null)
                 return NotFound();
-            }
-
-            return Ok(obj);
+            else
+                //return Ok(mapper.Map<TeacherApiModel>(teacher));
+                return Ok(mapper.Map<Teacher>(teacher));
         }
 
         // PUT: api/Teachers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTeacher(int id, TeacherAndClassroomApiModel teacherAndClassroomApiModel)
         {
@@ -67,11 +64,9 @@ namespace TeacherAndClassRoomWebApi.Controllers
             var teacher = mapper.Map<Teacher>(teacherAndClassroomApiModel.Teacher);
             var classrooms = mapper.Map<List<Classroom>>(teacherAndClassroomApiModel.Classrooms);
 
-            teacher.Classroom = classrooms;
+            teacher.Classrooms = classrooms;
 
             _context.Update(teacher);
-           // _context.Entry(teacherAndClassroomApiModel).State = EntityState.Modified;
-
             try
             {
                 await _context.SaveChangesAsync();
@@ -102,13 +97,14 @@ namespace TeacherAndClassRoomWebApi.Controllers
             var teacher = mapper.Map<Teacher>(teacherAndClassroomApiModel.Teacher);
             var classrooms = mapper.Map<List<Classroom>>(teacherAndClassroomApiModel.Classrooms);
 
-            teacher.Classroom = classrooms;
+            teacher.Classrooms = classrooms;
 
             _context.Teachers.Add(teacher);
 
             await _context.SaveChangesAsync();
+            return Ok(teacherAndClassroomApiModel.Teacher);
 
-            return CreatedAtAction("GetTeacher", new { id = teacher.Id }, teacher);
+          //  return CreatedAtAction("GetTeacher", new { id = teacher.Id }, teacher);
         }
 
         // DELETE: api/Teachers/5
@@ -119,7 +115,7 @@ namespace TeacherAndClassRoomWebApi.Controllers
             {
                 return NotFound();
             }
-            var teacher = await _context.Teachers.FindAsync(id);
+            var teacher = await _context.Teachers.Include(e => e.Classrooms).Where(t => t.Id == id).FirstOrDefaultAsync();
             if (teacher == null)
             {
                 return NotFound();

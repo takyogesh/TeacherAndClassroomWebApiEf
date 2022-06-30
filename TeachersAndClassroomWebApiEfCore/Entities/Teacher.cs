@@ -20,6 +20,6 @@ namespace TeachersAndClassroomDll.Entities
 
         [Column(TypeName = "Varchar(100)")]
         public string? Address { get; set; }
-        public ICollection<Classroom>? Classroom { get; set; }
+        public ICollection<Classroom>? Classrooms { get; set; }
     }
 }
