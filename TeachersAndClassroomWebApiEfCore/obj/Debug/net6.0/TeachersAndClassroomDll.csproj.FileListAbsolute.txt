@@ -1,0 +1,14 @@
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\bin\Debug\net6.0\TeachersAndClassroomDll.deps.json
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\bin\Debug\net6.0\TeachersAndClassroomDll.runtimeconfig.json
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\bin\Debug\net6.0\TeachersAndClassroomDll.dll
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\bin\Debug\net6.0\TeachersAndClassroomDll.pdb
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.csproj.AssemblyReference.cache
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.AssemblyInfoInputs.cache
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.AssemblyInfo.cs
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.csproj.CoreCompileInputs.cache
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.dll
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\refint\TeachersAndClassroomDll.dll
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.pdb
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\TeachersAndClassroomDll.genruntimeconfig.cache
+C:\Users\MICROBYTE COMPUTERS\source\repos\TeachersAndClassroomWebApiEfCore\TeachersAndClassroomWebApiEfCore\obj\Debug\net6.0\ref\TeachersAndClassroomDll.dll
